@@ -1,0 +1,10 @@
+[
+{
+  "modid": "supersecretsettings",
+  "name": "Super Secret Settings",
+  "description": "Re-enables Super Secret Settings",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "authorList": ["djsrv"]
+}
+]
