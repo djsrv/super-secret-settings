@@ -11,8 +11,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import djsrv.supersecretsettings.render.ShaderHandler;
 
 @Mod(modid = SuperSecretSettings.MOD_ID, version = SuperSecretSettings.VERSION, clientSideOnly = true)
-public class SuperSecretSettings
-{
+public class SuperSecretSettings {
 	@Instance(SuperSecretSettings.MOD_ID)
 	public static SuperSecretSettings instance;
 	
@@ -22,8 +21,7 @@ public class SuperSecretSettings
 	public ShaderHandler shaderHandler;
 	
 	@EventHandler
-	public void preInit(FMLPreInitializationEvent event)
-	{
+	public void preInit(FMLPreInitializationEvent event) {
 		this.shaderHandler = new ShaderHandler(Minecraft.getMinecraft());
 		MinecraftForge.EVENT_BUS.register(new GuiOptionsEventHandler());
 	}

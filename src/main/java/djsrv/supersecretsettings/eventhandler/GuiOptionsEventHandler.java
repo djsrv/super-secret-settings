@@ -9,13 +9,10 @@ import net.minecraftforge.fml.relauncher.ReflectionHelper;
 import djsrv.supersecretsettings.gui.GuiSuperSecretOptions;
 import djsrv.supersecretsettings.lib.LibObfuscation;
 
-public class GuiOptionsEventHandler
-{	
+public class GuiOptionsEventHandler {
 	@SubscribeEvent
-	public void modifyGuiOptions(GuiOpenEvent event)
-	{
-		if (event.getGui() instanceof GuiOptions && !(event.getGui() instanceof GuiSuperSecretOptions))
-		{
+	public void modifyGuiOptions(GuiOpenEvent event) {
+		if (event.getGui() instanceof GuiOptions && !(event.getGui() instanceof GuiSuperSecretOptions)) {
 			GuiOptions originalGui = (GuiOptions) event.getGui();
 			GuiScreen lastScreen = ReflectionHelper.getPrivateValue(GuiOptions.class, originalGui, LibObfuscation.LAST_SCREEN);
 			GameSettings settings = ReflectionHelper.getPrivateValue(GuiOptions.class, originalGui, LibObfuscation.SETTINGS);
